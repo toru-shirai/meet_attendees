@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dareinai</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+      input {
+        box-sizing: border-box;
+      }
+      #wrap {
+        padding: 1px;
+      }
+      #message {
+        font-weight: bold;
+      }
+      .box {
+        background-color: #eee;
+        border-bottom: 1px solid gray;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="box">
+        <button id="randomDecide">参加者から抽選</button>
+        <button id="confirm">不在確認</button>
+      </div>
+      <div class="box">
+        <table>
+          <tr>
+            <th>
+              参加予定メンバー
+            </th>
+            <th>
+              現在の参加者<button id="getMembers">取得</button>
+            </th>
+          </tr>
+        <tr>
+          <td>
+            <textarea cols="25" rows="20" id="participants"></textarea>
+            <button id="save">設定保存</button>
+          </td>
+        
+          <td>
+            <textarea cols="25" rows="20" id="members" disabled></textarea>
+            <button id="copy">参加者一覧コピー</button>
+          </td>
+        </tr>
+      </table>
+      </div>
+      <div class="box">
+        <ul id="message"></ul>
+      </div>
+    </div>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/popup.js"></script>
+  </body>
+</html>
